@@ -1,0 +1,10 @@
+%h1= 'Sign In'
+
+= simple_form_for(:session, url: login_path) do |f|
+
+  .row
+    = f.input :name, class: 'form-control'
+  .row
+    = f.input :password, class: 'form-control'
+  .row
+    = f.button :submit, t(:submit, default: 'Submit')

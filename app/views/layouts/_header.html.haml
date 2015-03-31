@@ -1,0 +1,30 @@
+.navbar.navbar-inverse
+  .container
+    .nav
+      %ul.nav.navbar-nav.navbar-right
+        .btn.btn-default
+          =link_to root_path do
+            = 'HOME'
+        - if logged_in?
+          %li
+            .btn.btn-default
+              =link_to '#' do
+                ='Users'
+          %li
+            .btn.btn-default.dropdown-toggle{ 'role' => 'button', 'data-toggle' => 'dropdown'}
+              Account
+              %b.caret
+            %ul.dropdown-menu{ 'role' => 'menu' }
+              %li
+                %a{:href => current_user}
+                  Profile
+                %a{:href => '#'}
+                  Settings
+                .divider
+                %a{:href => logout_path}
+                  Log Out
+        - else
+          %li
+            .btn.btn-default
+              =link_to login_path do
+                ='Log In'

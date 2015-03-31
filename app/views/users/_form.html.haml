@@ -1,0 +1,14 @@
+%h1= 'Sign up'
+
+= simple_form_for [ @user ] do |f|
+
+  .row
+    = f.input :name
+  .row
+    = f.input :email
+  .row
+    = f.input :password
+  .row
+    = f.input :password_confirmation
+  .row
+    = f.button :submit, t(:submit, default: 'Submit')

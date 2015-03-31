@@ -1,0 +1,16 @@
+%h1
+  = 'Your Timelines!'
+%br
+  %table
+    %thead
+      %tr
+        %th.col-md-2= 'Project'
+        %th.col-md-2= 'Description'
+        %th= 'Time'
+        %th= 'Date'
+        %th= 'Actions'
+    %tbody
+      - @timelines.each do |timeline|
+        %tr
+          %td= timeline.project
+          %td= timeline.description

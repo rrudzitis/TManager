@@ -1,0 +1,8 @@
+= simple_form_for [ @timeline ] do |f|
+  
+  .row
+    = f.input :project
+  .row
+    = f.input :description
+  .row
+    = f.button :submit, t(:submit, default: 'Submit')

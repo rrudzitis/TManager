@@ -1,0 +1,8 @@
+- if @user.errors.any?
+  .error-explanation
+    .alert
+      %h2
+        = t(:error, count: @user.errors.count)
+        %ul
+          - @user.errors.full_messages.each do |msg|
+            %li= msg
