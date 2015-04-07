@@ -1,7 +1,7 @@
 class TimelinesController < ApplicationController
 
   def index
-    @timelines = Timeline.order(created_at: :desc)
+    @timeline = Timeline.order(created_at: :desc)
   end
 
   def new

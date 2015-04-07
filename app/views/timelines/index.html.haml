@@ -1,16 +1,42 @@
 %h1
   = 'Your Timelines!'
-%br
-  %table
-    %thead
-      %tr
-        %th.col-md-2= 'Project'
-        %th.col-md-2= 'Description'
-        %th= 'Time'
-        %th= 'Date'
-        %th= 'Actions'
-    %tbody
-      - @timelines.each do |timeline|
+.row
+  .col-md-2
+    %h3.text-center#random9
+      ='EMPTY'
+  .col-md-10#thebigthing
+    .col-md-1
+      %h3.text-center#thething
+        ='NOT E'
+    .col-md-1
+      %h3.text-center#thething
+        ='NOT E'
+    .col-md-1
+      %h3.text-center#thething
+        ='NOT E'
+    .col-md-1
+      %h3.text-center#thething
+        ='NOT E'
+    .col-md-1
+      %h3.text-center#thething
+        ='NOT E'
+    .col-md-1
+      %h3.text-center#thething
+        ='NOT E'
+  %br
+    %table.table-bordered
+      %thead
         %tr
-          %td= timeline.project
-          %td= timeline.description
+          %th.col-md-2= 'Project'
+          %th.col-md-2= 'Description'
+          %th= 'Time'
+          %th= 'Date'
+          %th= 'Actions'
+      %tbody
+        - @timeline.each do |timeline|
+          %tr
+            %td= timeline.project
+            %td= timeline.description
+            %td
+            %td
+            %td

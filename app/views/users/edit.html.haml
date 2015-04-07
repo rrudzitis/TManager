@@ -1,0 +1,27 @@
+%h3#random4= 'Update your profile'
+
+= simple_form_for [ @user ] do |f|
+
+  = render 'shared/errors_messages'
+
+
+  .jumbotron
+    .row
+      .col-md-2
+        %p#random5='INSERT PICTURE HERE'
+      .col-md-10
+        %p#random6='TEXT'
+    .row
+      .col-md-2
+        %p#random7='ADVANCED SETTINGS'
+      .col-md-10#random8
+        .row
+          = f.input :name
+        .row
+          = f.input :email
+        .row
+          = f.input :password
+        .row
+          = f.input :password_confirmation
+        .row
+          = f.button :submit, t(:submit, default: 'Submit')

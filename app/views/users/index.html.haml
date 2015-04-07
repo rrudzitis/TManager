@@ -1,0 +1,14 @@
+%h3= 'All Users'
+
+%table
+  %thead
+    %tr
+      %th.col-md-2= 'Name'
+      %th.col-md-2= 'Email'
+      %th.col-md-2= 'Company'
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td= user.email
+        %td= 'company'
